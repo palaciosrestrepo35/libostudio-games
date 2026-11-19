@@ -1,6 +1,6 @@
 # LiboStudio: Real-Money Slot Games for Stake Engine
 
-I'm Libardo Palacios, a game developer from Medellín, Colombia. LiboStudio is my solo studio. I build casino games for Stake Engine, from the game math to gameplay, animation, audio, testing and release.
+I'm Libardo Palacios, a game developer from Medellín, Colombia. LiboStudio is my solo studio. I build casino games for Stake Engine, from the game math to gameplay, animation, audio, testing and release. I also design and build websites (see the web section below).
 
 I build by directing AI coding agents (Claude Code): I write the specifications, review every change, and verify results through playtesting and automated checks.
 
@@ -33,11 +33,41 @@ A gothic witch slot set in a potion tower.
 - A gothic HUD drawn in code: stone medallions with silver rims (see `code/ui_skin.ts`).
 - An original drum-driven soundtrack and 52 sound effects, synthesized in Python.
 
+## HIGH SCORE
+
+![HIGH SCORE](media/highscore_preview.png)
+
+An 80s arcade slot in true pixel art, with a rival to beat: Roxy.
+
+- **Stake review:** rated **6.0 / 9** by Stake reviewers (November 2026), meeting the publication threshold. Going live now, with animation upgrades planned for a re-rating.
+- A 15-line game with expanding sticky wilds, free spins and a Hold & Win coin bonus. Beat Roxy's score inside the coin bonus and every coin, jackpot and the grand prize doubles.
+- 3 bet modes, 96.50% RTP, max win 10,000x.
+- The whole screen is styled as an arcade cabinet: pixel control panel, round arcade spin button with chasing marquee bulbs, CRT scanlines, rain and neon.
+- Pixel animation generated in code (Python, Pillow, NumPy): 50 symbol frames that play on land, at idle and on wins, plus Roxy's blinks, winks, hops and a gum bubble that grows and pops.
+- Respects reduced motion and turbo mode.
+
+---
+
+## Web: LIBO STUDIOS website
+
+Live: https://libostudios.space/
+Code: https://github.com/palaciosrestrepo35/libo-studios
+
+Besides games, I build websites. LIBO STUDIOS is my web design and development studio in Medellín, and this is its bilingual site (Spanish and English).
+
+- **No framework.** Plain HTML, CSS and JavaScript, served by Vercel as is. Fast, with nothing to install.
+- **My own small build tool** (`tools/build.mjs`): each page is written once with a JSON header (title, description, breadcrumb, Google structured data). The tool wraps it in the shared layout and writes the final pages and the sitemap.
+- **Automatic quality checks** (`tools/check.mjs`) on every page before deploy: title and description length, exactly one main heading, no broken links, valid Google data, minimum word count on service pages, and plain language with no technical jargon for clients.
+- **Motion and WebGL:** an animated WebGL2 shader background in every page header, plus scroll animations and interactive components ported from GSAP and React Bits to plain JS and CSS. Visitors who ask for reduced motion get a static, complete page.
+- **SEO:** canonical URLs, hreflang between Spanish and English, Open Graph images, FAQ data for Google and instant indexing through IndexNow.
+
 ---
 
 ## Tech
 
 **TypeScript · Svelte 5 · PixiJS 8 (WebGL) · Python · Stake Math SDK and Web SDK · Playwright**
+
+**Web:** HTML · CSS · JavaScript · WebGL2 · Node.js build tools · Vercel
 
 ## Code samples
 
